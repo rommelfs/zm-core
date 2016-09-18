@@ -7,14 +7,14 @@ if(file_exists($pathGlobal)){
     $globalConf = require $pathGlobal;
 }
 // Chargement conf local;
-$pathLocal = getcwd()."/config/autoload/local.php";
+$pathLocal = getcwd()."/config/autoload/database.local.php";
 $localConf = array();
 if(file_exists($pathLocal)){
     $localConf = require $pathLocal;
 }
 
 $globalConf = array_replace_recursive($globalConf,$localConf);
-if(empty($localConf['doctrine']['connection']['orm_default']['params'])){
+if(empty($globalConf['doctrine']['connection']['orm_default']['params'])){
     die("Connection parameters not configured");
 }
 
