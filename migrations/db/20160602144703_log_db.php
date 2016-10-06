@@ -43,6 +43,7 @@ class LogDb extends AbstractMigration
             ->addColumn('created_at', 'datetime', array('null' => true))
             ->addColumn('updater', 'string', array('null' => true, 'limit' => 255))
             ->addColumn('updated_at', 'datetime', array('null' => true))
+            ->addIndex(array('source_id'))
             ->create();
         $table->changeColumn('id', 'integer',array('identity'=>true,'signed'=>false))->update();
     }
