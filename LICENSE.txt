@@ -1,8 +1,8 @@
-Monarc - Cases
+MONARC - CASES
 
 Copyright (c) 2016, securitymadein.lu - Smile GIE
 
-This software might use third party components, acknowledged here by :
+This software might use third party components, acknowledged here by:
 
 - Zend Framework, v2.4.9
 
